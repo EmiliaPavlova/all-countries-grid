@@ -1,0 +1,23 @@
+.pagination_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination_wrapper > div {
+  margin: 20px 10px;
+  padding: 5px;
+  color: #999999;
+}
+
+.pagination_wrapper > div:not(.dots):not(.disabled) {
+  cursor: pointer;
+
+}
+
+.pagination_wrapper > div.selected {
+  color: #000000;
+}
+
+.disabled {
+  pointer-events: none;
+}

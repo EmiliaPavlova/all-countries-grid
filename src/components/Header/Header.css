@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_title {
+  padding: 10px 15px 20px;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header_title {
+    padding-bottom: 0;
+  }
+}

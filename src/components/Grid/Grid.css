@@ -1,0 +1,68 @@
+.grid_wrapper table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.grid_wrapper td,
+.grid_wrapper th {
+  padding: 10px 20px;
+}
+
+.grid_wrapper th[scope='col'] {
+  padding: 20px;
+  background: #dddddd;
+  text-align: left;
+}
+
+.table_title {
+  display: flex;
+  cursor: pointer;
+}
+
+.table_title span:not(:first-child) {
+  width: 14px;
+  height: 19px;
+  margin-left: 10px;
+}
+
+.grid_wrapper tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.grid_wrapper tr {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .grid_wrapper table th[scope='col'],
+  .grid_wrapper table td {
+    font-size: .8em;
+    text-transform: initial;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid_wrapper table thead {
+    display: none;
+  }
+
+  .grid_wrapper table tr {
+    border-bottom: 3px solid #dddddd;
+    display: block;
+  }
+
+  .grid_wrapper table td {
+    display: block;
+    text-align: right;
+  }
+
+  .grid_wrapper table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
